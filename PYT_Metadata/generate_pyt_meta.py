@@ -51,7 +51,14 @@ tool_xml = """<?xml version="1.0"?>
 			{% for tag in tool.tags %}<keyword>{{tag}}</keyword>
 			{% endfor %}{% endif %}
 		</searchKeys>
+        <idCredit></idCredit>
+        <resConst>
+            <Consts>
+                <useLimit></useLimit>
+            </Consts>
+        </resConst>
 	</dataIdInfo>
+
 	<distInfo>
 		<distributor>
 			<distorFormat>
