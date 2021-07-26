@@ -1,7 +1,6 @@
-
 # PYT-Metadata 
 
-A Metadata tool for ArcGIS Toolboxes.
+A Metadata tool for ArcGIS Toolboxes in the Item Description style.
 
 ## Description
 

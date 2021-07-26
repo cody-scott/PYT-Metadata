@@ -125,7 +125,7 @@ def build_parameter_data(tool):
         if diag_ref:
             pr["dialog_reference"] = markdown_data(diag_ref, 3)
         if py_ref:
-            pr["python_reference"] = markdown_data(py_ref, 2)
+            pr["python_reference"] = markdown_data(py_ref, 3)
 
         param_list.append(pr)
 
@@ -158,6 +158,11 @@ def save_xml_file(toolbox_path, xml_data, toolbox, tool, **kwargs):
         f.write(xml_data)
 
 def markdown_data(text, indent_length):
-    text = re.sub("(^\n*\s*)|(\n*\s*$)", '', text)
-    text = text.replace(f"\n{'    '*indent_length}","\n")
+    _depth = 4*(indent_length)
+    new_text = re.sub(r"^( {{{}}})".format(_depth), '', text, flags=re.MULTILINE)
+    new_text_md = markdown.markdown(new_text)
+    return su.escape(new_text_md)
+
+    # text = re.sub("(^\n*\s*)|(\n*\s*$)", '', text)
+    # text = text.replace(f"\n{'    '*indent_length}","\n")
     return su.escape(wrap_div(markdown.markdown(text)))

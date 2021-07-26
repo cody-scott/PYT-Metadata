@@ -35,7 +35,11 @@ class Tool(object):
             end
             """,
             'python_reference': """
-            output_file = parameters[0].valueAsText
+            some ref
+
+            code
+
+                output_file = parameters[0].valueAsText
             """,
             
         },

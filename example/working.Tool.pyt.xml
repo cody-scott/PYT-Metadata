@@ -2,11 +2,11 @@
 <metadata xml:lang="en">
 	<Esri>
 		<CreaDate>20210726</CreaDate>
-		<CreaTime>12340600</CreaTime>
+		<CreaTime>13520800</CreaTime>
 		<ArcGISFormat>1.0</ArcGISFormat>
 		<SyncOnce>TRUE</SyncOnce>
 		<ModDate>20210726</ModDate>
-		<ModTime>12340600</ModTime>
+		<ModTime>13520800</ModTime>
 		<scaleRange>
 			<minScale>150000000</minScale>
 			<maxScale>5000</maxScale>
@@ -16,19 +16,23 @@
 	<tool name="Tool" displayname="Tool" toolboxalias="Toolbox" xmlns="">
 	<parameters>
     <param name="model_output_file" displayname="Model Output File" type="Required" direction="Input" datatype="File" expression="model_output_file">
-	<dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;&lt;h3&gt;Some header to your contents&lt;/h3&gt;
+	<dialogReference>&lt;h3&gt;Some header to your contents&lt;/h3&gt;
 &lt;p&gt;this is the contents&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;def code1():
     print('some code')
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;```
+
+
 def code2():
-    print('some code')    &lt;/p&gt;
-&lt;p&gt;def code3():
     print('some code')
-```&lt;/p&gt;
-&lt;p&gt;end&lt;/p&gt;&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
-	<pythonReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;&lt;p&gt;output_file = parameters[0].valueAsText&lt;/p&gt;&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</pythonReference>
+
+def code3():
+    print('some code')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;end&lt;/p&gt;</dialogReference>
+	<pythonReference>&lt;p&gt;some ref&lt;/p&gt;
+&lt;p&gt;code&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;output_file = parameters[0].valueAsText
+&lt;/code&gt;&lt;/pre&gt;</pythonReference>
 	
 	</param>
 	<param name="output_folder" displayname="Output Folder" type="Required" direction="Input" datatype="Workspace" expression="output_folder">
@@ -42,13 +46,13 @@ def code2():
 	</param>
 	
 	</parameters>
-	<summary>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;&lt;p&gt;a summary with some &lt;strong&gt;bold&lt;/strong&gt; contents&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;a code block&lt;/code&gt;&lt;/p&gt;&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</summary>
-	<usage>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;&lt;p&gt;usage stuff&lt;/p&gt;
+	<summary>&lt;p&gt;a summary with some &lt;strong&gt;bold&lt;/strong&gt; contents&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;a code block&lt;/code&gt;&lt;/p&gt;</summary>
+	<usage>&lt;p&gt;usage stuff&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;code block&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;other&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;code block
-&lt;/code&gt;&lt;/pre&gt;&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</usage>
+&lt;/code&gt;&lt;/pre&gt;</usage>
 	
     </tool>
 	<dataIdInfo>
