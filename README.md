@@ -27,6 +27,10 @@ Installing is simple:
 
     pip install PYT-Metadata
 
+If you are working an a jupyter notebook (ArcGIS Notebook) then you can install with the following command in a cell:
+
+    !pip install PYT-Metadata
+
 ## Security
 
 Because this tool uses the imp module to load your toolbox from source, as pyt files are not loaded by python, you need to ensure the contents of the toolbox (and any imports) satisfy your security policies. 
