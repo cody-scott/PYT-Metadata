@@ -37,7 +37,7 @@ Because this tool uses the imp module to load your toolbox from source, as pyt f
 
 The TLDR is: make sure you know whats inside the toolbox code before running it.
 
-Ultimately when you load the toolbox in arcgis desktop/pro it will run the code anyways, but as a best practice, you should understand the contents. 
+Ultimately when you load the toolbox in arcgis desktop/pro it will run the code anyways, but as a best practice you should understand the contents. 
 
 Since you're writing metadata for this, you'll likely be one of the authors, so should have a grasp on the contents.
 
