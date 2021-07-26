@@ -3,6 +3,8 @@ import optparse
 
 from .generate_pyt_meta import meta_toolbox
 
+
+
 def parse_options(args=None, values=None):
     """
     Define and parse `optparse` options for command-line usage.
@@ -30,6 +32,11 @@ def parse_options(args=None, values=None):
     return opts
 
 def run():
+    try:
+        import arcpy
+    except ImportError:
+        raise Exception("ArcPy is required to run this tool")
+        
     options = parse_options()
     if options['implicit_run'] is None:
         print("\n".join([
