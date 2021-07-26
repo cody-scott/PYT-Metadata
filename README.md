@@ -80,7 +80,7 @@ If you do not include the -y it will prompt you to include it and a reminder abo
 
 ## Output
 
-The tool will overwrite existing files for the metadata. This means any changes made in ArcGIS Pro/Desktip will be overwritten.
+The tool will overwrite existing files for the metadata. This means any changes made in ArcGIS Pro/Desktop will be overwritten.
 
 Further, since this tool renders the HTML directly, it lets you add features not supported directly through the ArcGIS Metadata Editor, including codeblocks. If you edit the metadata in ArcGIS, these additional structures will be removed by ArcGIS.
 
