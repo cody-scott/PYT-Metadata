@@ -20,6 +20,19 @@ class Tool(object):
             ### Some header to your contents
 
             this is the contents
+            
+                def code1():
+                    print('some code')
+
+
+                def code2():
+                    print('some code')    
+                            
+                def code3():
+                    print('some code')
+
+
+            end
             """,
             'python_reference': """
             output_file = parameters[0].valueAsText

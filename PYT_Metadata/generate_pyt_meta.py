@@ -6,6 +6,7 @@ import datetime
 import imp
 
 import os
+import re
 
 tool_xml = """<?xml version="1.0"?>
 <metadata xml:lang="en">
@@ -157,5 +158,6 @@ def save_xml_file(toolbox_path, xml_data, toolbox, tool, **kwargs):
         f.write(xml_data)
 
 def markdown_data(text, indent_length):
+    text = re.sub("(^\n*\s*)|(\n*\s*$)", '', text)
     text = text.replace(f"\n{'    '*indent_length}","\n")
-    return su.escape(wrap_div(markdown.markdown(text).replace("\n","")))
+    return su.escape(wrap_div(markdown.markdown(text)))
