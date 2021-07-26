@@ -4,7 +4,7 @@ A Metadata tool for ArcGIS Toolboxes in the Item Description style.
 
 ## Description
 
-The one line goal for this package is to attempt write everything related to your python toolbox tools in the python toolbox.  
+The simple goal for this package is to attempt write everything related to your python toolbox tools in the python toolbox.  
 
 This means your code for the non-business logic (but could also include business logic), but also your metadata, which normally is completed in ArcGIS Pro/Desktop afterwards, often as an afterthought.
 
