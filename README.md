@@ -94,3 +94,10 @@ Further, since this tool renders the HTML directly, it lets you add features not
  * ArcGIS Desktop (but may still work)
 
  These may be a future addition, but are not currently supported.
+
+ ## Whats next?
+
+ This is a work in progress so there is a lot of room for improvement.
+
+ Please share any ideas or issues you have.
+ 
