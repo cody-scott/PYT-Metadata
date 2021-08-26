@@ -2,11 +2,11 @@ from xml.sax import saxutils as su
 import markdown
 from jinja2 import Template
 import datetime
+from textwrap import dedent
 
 import imp
 
 import os
-import re
 
 tool_xml = """<?xml version="1.0"?>
 <metadata xml:lang="en">
@@ -99,9 +99,9 @@ def build_tool_data(toolbox, tool):
     }
 
     if summary:
-        tool_data['summary'] = markdown_data(summary, 2)
+        tool_data['summary'] = markdown_data(summary)
     if usage:
-        tool_data['usage'] = markdown_data(usage, 2)
+        tool_data['usage'] = markdown_data(usage)
 
     return tool_data
 
@@ -123,9 +123,9 @@ def build_parameter_data(tool):
         }
 
         if diag_ref:
-            pr["dialog_reference"] = markdown_data(diag_ref, 3)
+            pr["dialog_reference"] = markdown_data(diag_ref)
         if py_ref:
-            pr["python_reference"] = markdown_data(py_ref, 3)
+            pr["python_reference"] = markdown_data(py_ref)
 
         param_list.append(pr)
 
@@ -157,12 +157,7 @@ def save_xml_file(toolbox_path, xml_data, toolbox, tool, **kwargs):
     with open(fname, 'w') as f:
         f.write(xml_data)
 
-def markdown_data(text, indent_length):
-    _depth = 4*(indent_length)
-    new_text = re.sub(r"^( {{{}}})".format(_depth), '', text, flags=re.MULTILINE)
+def markdown_data(text):
+    new_text = dedent(text)
     new_text_md = markdown.markdown(new_text)
     return su.escape(new_text_md)
-
-    # text = re.sub("(^\n*\s*)|(\n*\s*$)", '', text)
-    # text = text.replace(f"\n{'    '*indent_length}","\n")
-    return su.escape(wrap_div(markdown.markdown(text)))
