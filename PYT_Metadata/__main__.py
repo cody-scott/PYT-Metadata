@@ -46,7 +46,7 @@ def run():
             "",
         ]))
         print("To confirm, re-run using the -y option.")
-        print(f"python -m pyt_metadata {options['input']} -y")
+        print(f"python -m PYT_Metadata {options['input']} -y")
         sys.exit(1)
 
     # Run
