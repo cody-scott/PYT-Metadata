@@ -1,12 +1,17 @@
-[build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "PYT-Metadata"
+version = "1.1.1"
+description = "Metadata generator from python toolboxes"
+authors = ["Cody Scott <jcodyscott+PYTMETA@gmail.com>"]
+license = "MIT"
 
-[project]
-requires = [
-    'jinja2 > 0',
-    'markdown > 0',
-]
+[tool.poetry.dependencies]
+python = "^3.6"
+Markdown = "^3.3.6"
+Jinja2 = "^3.0.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
